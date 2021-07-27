@@ -34,7 +34,8 @@ public class Driver {
             switch (browser) {
                 case "remote-chrome":
                     try {
-                        URL url = new URL("http://18.212.57.48:4444/wd/hub");
+                        String gridAddress = "3.238.193.145";
+                        URL url = new URL("http://" + gridAddress + ":4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
                         desiredCapabilities.setBrowserName("chrome");
                         driver = new RemoteWebDriver(url, desiredCapabilities);
